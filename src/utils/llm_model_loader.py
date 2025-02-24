@@ -8,11 +8,11 @@ class LLMModelLoader:
     
     def load_llm_model(self,llm_type:str):
         if llm_type == "google-gemini":
-            return self.get_google_gemini_model()
+            return self._get_google_gemini_model()
         else:
             raise ValueError("Invalid LLM type")
 
-    def get_google_gemini_model(self):
+    def _get_google_gemini_model(self):
         return ChatGoogleGenerativeAI(
             model=gemini_settings.GOOGLE_MODEL_NAME,
             temperature=gemini_settings.TEMPERATURE,
