@@ -11,3 +11,4 @@ wheels/
 
 .env
 src/data/input_data/
+src/data/output_data/
